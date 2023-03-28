@@ -1,7 +1,10 @@
+import styles from './PokemonCard.module.css'
+
 function PokemonCard() {
     return (
-    <figure>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="image de bulbasaur "/>
+    <figure className={styles.card}>
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="image de bulbasaur "
+        className={styles.cardImg}/>
         <figcaption>bulbasaur</figcaption>
     </figure>
     );
