@@ -1,30 +1,18 @@
 import styles from './PokemonCard.module.css'
 
-const pokemonList = [
-  {
-    name: "bulbasaur",
-    imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
-  {
-    name: "mew",
-  },
-];
 
-function PokemonCard() {
+
+function PokemonCard(props) {
  
-    let pokemon = pokemonList[0]
-    // pokemon = pokemonList[1]
 
-    return <div>{pokemon===pokemonList[0]? 
+    return(
     <figure className={styles.card}>
-        <img src={pokemon.imgSrc} alt={pokemon.name}
+        <img src={props.pokemon.imgSrc} alt={props.pokemon.name}
         className={styles.cardImg}/>
-        <figcaption>{pokemon.name}</figcaption>
-    </figure>:<figure className={styles.card}> <p>???</p>   
-        <figcaption>{pokemonList[1].name}</figcaption></figure>}
-    </div>
-    ;
-  }
+        <figcaption>{props.pokemon.name}</figcaption>
+    </figure>
+    )
+    }
+
   
   export default PokemonCard;
