@@ -12,8 +12,9 @@ function PokemonCard({pokemon}) {
       }
     return(
     <figure className={styles.card}>
-        <img src={pokemon.imgSrc} alt={pokemon.name}
-        className={styles.cardImg}/>
+        {pokemon.imgSrc?  <img src={pokemon.imgSrc} alt={pokemon.name}
+        className={styles.cardImg}/>:<p>???</p>                    }
+       
         <figcaption>{pokemon.name}</figcaption>
     </figure>
     )
