@@ -16,7 +16,7 @@ function PokemonCard() {
     let pokemon = pokemonList[0]
     // pokemon = pokemonList[1]
 
-    return <div>{pokemon===pokemonList[0]? 
+    return <div>{pokemon.imgSrc? 
     <figure className={styles.card}>
         <img src={pokemon.imgSrc} alt={pokemon.name}
         className={styles.cardImg}/>
