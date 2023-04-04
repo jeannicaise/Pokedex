@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import MyTitle from "./components/MyTitle"
 import PokemonCard from "./components/PokemonCard"
+import navBar from './components/navBar'
+
 
 
 
@@ -33,20 +35,19 @@ function App() {
         name: "mew",
       },
     ];
-    const [index, setIndex] = useState(0)
+    
+    
+    
+const [index, setIndex] = useState(0)
 
-    const handlePrevClick =() => {setIndex(index-1)}
-    const handleNextClick =() => {setIndex(index+1)}
-    
-    
+const handlePrevClick =() => {setIndex(index-1)}
+const handleNextClick =() => {setIndex(index+1)}
     let pokemon = pokemonList[index]
   return (
     <div>
-      <MyTitle/>
+     
       <PokemonCard pokemon={pokemon}/>
-      <button onClick={handlePrevClick}> Précedent</button>
-      <button onClick={handleNextClick}> Suivant</button>
-
+      <MyTitle handlePrevClick={handlePrevClick} handleNextClick={handleNextClick} />
     </div>
     
   );
